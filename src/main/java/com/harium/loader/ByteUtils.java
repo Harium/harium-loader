@@ -30,7 +30,7 @@ public class ByteUtils {
   }
 
   public static int readIntBigEndian(byte[] array, int offset) {
-    return (array[0] & 255) << 24 | (array[1 + offset] & 255) << 16
+    return (array[offset] & 255) << 24 | (array[1 + offset] & 255) << 16
         | (array[2 + offset] & 255) << 8 | array[3 + offset] & 255;
   }
 
